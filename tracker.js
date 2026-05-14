@@ -14,3 +14,14 @@ async function tracker() {
     const duration = await ask ("Enter times: ")
     sessions.push({topic, duration});
 }
+
+const validateInput = (topic, duration) => {
+    if(topic === ""){
+        return "topic must be a string";
+    } else if(isNaN(duration)) {
+        return "duration must be a number";
+    } else if(duration <= 0){
+        return "duration must be greater than 0";
+    }
+        
+}
