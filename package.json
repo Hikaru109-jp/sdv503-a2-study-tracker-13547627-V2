@@ -1,0 +1,21 @@
+{
+  "name": "sdv503-a2-study-tracker-13547627-v2",
+  "version": "1.0.0",
+  "description": "This is a repository for the assessment 2 of sdv503 class.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hikaru109-jp/sdv503-a2-study-tracker-13547627-V2.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Hikaru109-jp/sdv503-a2-study-tracker-13547627-V2/issues"
+  },
+  "homepage": "https://github.com/Hikaru109-jp/sdv503-a2-study-tracker-13547627-V2#readme"
+}
