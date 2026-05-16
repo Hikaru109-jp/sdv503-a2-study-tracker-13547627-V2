@@ -37,3 +37,12 @@ const displaySessions = (sessions) => {
         console.log(session.topic, session.duration);
     })
 }
+
+
+const displayTotal = (sessions) => {
+    const total = sessions.reduce((total, session) => {
+        return total + session.duration;
+    }, 0);
+
+    console.log(total);
+}
