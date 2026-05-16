@@ -55,3 +55,19 @@ async function exitWork() {
             return
         }
 }
+
+
+async function mainMenu() {
+    while(true){
+        const menu = await ask ("Enter Command: " + ["add", "list", "total", "exit"]);
+            if(menu === "add"){
+                tracker();
+            } else if(menu === "list"){
+                displaySessions(sessions);
+            } else if(menu === "total"){
+                displayTotal(sessions);
+            } else {
+               exitWork();
+            }
+        }
+}
