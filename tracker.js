@@ -12,6 +12,11 @@ let totalDuration = 0;
 async function tracker() {
     const topic = await ask ("Enter topics: ");
     const duration = await ask ("Enter times: ")
+    const error = ValidateInput(topic, duration);
+        if(error) {
+            console.log(error);
+            return;
+        }
     sessions.push({topic, duration});
 }
 
@@ -24,4 +29,11 @@ const validateInput = (topic, duration) => {
         return "duration must be greater than 0";
     }
         
+}
+
+
+const displaySessions = (sessions) => {
+    sessions.forEach((session) => {
+        console.log(session.topic, session.duration);
+    })
 }
