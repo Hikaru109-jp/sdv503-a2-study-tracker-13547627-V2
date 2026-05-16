@@ -4,6 +4,10 @@ const rl = readline.createInterface({
     output: process.stdout
 });
 
+function ask(q) {
+    return new Promise(resolve => rl.question(q, resolve));
+}
+
 let topic = "";
 let duration = 0;
 let sessions = [];
@@ -71,3 +75,5 @@ async function mainMenu() {
             }
         }
 }
+
+mainMenu()

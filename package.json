@@ -13,7 +13,7 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
+  "type": "module",
   "bugs": {
     "url": "https://github.com/Hikaru109-jp/sdv503-a2-study-tracker-13547627-V2/issues"
   },
