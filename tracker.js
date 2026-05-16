@@ -46,3 +46,12 @@ const displayTotal = (sessions) => {
 
     console.log(total);
 }
+
+async function exitWork() {
+    const answer = await ask ("Are you sure to finish this work?");
+        if(answer === "yes"){
+            process.exit();
+        } else {
+            return
+        }
+}
