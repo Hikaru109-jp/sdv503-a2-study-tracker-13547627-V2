@@ -16,7 +16,7 @@ let totalDuration = 0;
 async function tracker() {
     const topic = await ask ("Enter topics: ");
     const duration = await ask ("Enter times: ")
-    const error = ValidateInput(topic, duration);
+    const error = validateInput(topic, duration);
         if(error) {
             console.log(error);
             return;
@@ -45,14 +45,14 @@ const displaySessions = (sessions) => {
 
 const displayTotal = (sessions) => {
     const total = sessions.reduce((total, session) => {
-        return total + session.duration;
+        return total + Number(session.duration);
     }, 0);
 
     console.log(total);
 }
 
 async function exitWork() {
-    const answer = await ask ("Are you sure to finish this work?");
+    const answer = await ask ("Are you sure to finish this work? ");
         if(answer === "yes"){
             process.exit();
         } else {
@@ -63,15 +63,15 @@ async function exitWork() {
 
 async function mainMenu() {
     while(true){
-        const menu = await ask ("Enter Command: " + ["add", "list", "total", "exit"]);
+        const menu = await ask ("Enter Command: [add, list, total, exit]: ");
             if(menu === "add"){
-                tracker();
+               await tracker();
             } else if(menu === "list"){
                 displaySessions(sessions);
             } else if(menu === "total"){
                 displayTotal(sessions);
             } else {
-               exitWork();
+                await exitWork();
             }
         }
 }
